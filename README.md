@@ -25,6 +25,29 @@ streamlit-predictive-maintenance/
 the earlier Flask build, just decoupled from any web framework so `app.py`
 can call `panel.step(...)` on every refresh tick.
 
+## What's new: automated escalation notifications
+
+The moment a panel first crosses into **Warning** (the earliest possible
+heads-up, before it can reach Critical), the app auto-builds a message:
+
+- **To:** that line's Line Manager (e.g. Raw Mill → Tunde Bakare)
+- **Cc:** the Electrical Manager (Engr. Ifeanyi Okoro), copied on every line
+- **Attn:** the technician actually rostered on duty for that line today
+
+No one has to notice the fault and go tell someone — the system already
+named the three people who need to know, with a diagnosis using the
+actual reading and baseline (not a vague "check the panel"), and a
+numbered, safety-first procedure to follow. See the **Alert Log** panel
+(expand any alert to view the full message) and the **panel detail
+dialog** for any panel currently in Warning/Critical.
+
+The duty roster (`LINE_MANAGERS`, `ELECTRICAL_MANAGER`, `TECHNICIAN_POOL`
+in `sim.py`) is fixed + randomly assigned per session for this demo — in
+a real deployment it would sync from an HR/shift-scheduling system so
+"who's on duty today" is always accurate. No actual email/SMS is sent in
+this prototype; it's a full dry run of the message content and routing
+logic, ready to wire into Twilio/SMTP/Slack when you're ready.
+
 ## Run locally
 
 ```bash
