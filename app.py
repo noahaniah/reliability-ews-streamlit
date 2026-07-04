@@ -50,7 +50,6 @@ st.markdown(f"""
 .stApp {{ background-color: {COLORS['bg']}; }}
 h1, h2, h3, .panel-name {{ font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }}
 .mono {{ font-family: 'IBM Plex Mono', monospace; }}
-
 .panel-card {{
     background: {COLORS['surface']};
     border: 1px solid {COLORS['border']};
@@ -61,7 +60,6 @@ h1, h2, h3, .panel-name {{ font-family: 'Oswald', sans-serif; text-transform: up
 }}
 .panel-name {{ font-size: 14.5px; font-weight: 500; margin: 0; color: {COLORS['text']}; }}
 .panel-section {{ font-size: 11.5px; color: {COLORS['text_faint']}; margin: 2px 0 8px; }}
-
 .status-pill {{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -71,7 +69,6 @@ h1, h2, h3, .panel-name {{ font-family: 'Oswald', sans-serif; text-transform: up
     letter-spacing: 0.05em;
     display: inline-block;
 }}
-
 .stat-chip {{
     background: {COLORS['surface_raised']};
     border: 1px solid {COLORS['border']};
@@ -83,7 +80,6 @@ h1, h2, h3, .panel-name {{ font-family: 'Oswald', sans-serif; text-transform: up
     text-align: center;
 }}
 .stat-chip b {{ color: {COLORS['text']}; font-size: 15px; }}
-
 .alert-item {{
     border-left: 3px solid {COLORS['text_faint']};
     background: {COLORS['surface_raised']};
@@ -97,7 +93,6 @@ h1, h2, h3, .panel-name {{ font-family: 'Oswald', sans-serif; text-transform: up
 .alert-item.resolved {{ opacity: 0.4; }}
 .a-title {{ font-weight: 600; display:flex; justify-content: space-between; color: {COLORS['text']};}}
 .a-meta {{ font-family: 'IBM Plex Mono', monospace; color: {COLORS['text_faint']}; font-size: 10.5px; margin-top: 3px;}}
-
 .insight-box {{
     background: {COLORS['surface_raised']};
     border: 1px solid {COLORS['border']};
@@ -107,7 +102,6 @@ h1, h2, h3, .panel-name {{ font-family: 'Oswald', sans-serif; text-transform: up
     margin: 12px 0 18px;
 }}
 .insight-box h4 {{ color: {COLORS['steel']}; font-size: 13px; margin: 0 0 8px; text-transform: uppercase; font-family:'Oswald',sans-serif;}}
-
 div[data-testid="stMetric"] {{ background: {COLORS['surface_raised']}; border: 1px solid {COLORS['border']}; border-radius: 4px; padding: 8px 12px; }}
 </style>
 """, unsafe_allow_html=True)
